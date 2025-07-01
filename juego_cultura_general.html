@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Juego de Cultura General</title>
+    <link rel="stylesheet" href="juego_cultura_general.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <section>
+        <header>
+          <div>
+            <h1>¿Cuanto sabes del mundo que te rodea?</h1>
+          </div>
+          <nav>
+            <ul>
+              <li><a href="identikit.html">Home</a></li>
+              <li><a href="mjcomidas.html">Las mejores comidas</a></li>
+              <li><a href="playlist.html">Playlist</a></li>
+              <li><a href="juego_cultura_general.html">Juego</a></li>
+            </ul>
+          </nav>
+        </header>
+      </section>
+
+      <section>
+        <div class="question-box">
+          <div class="question" id="question"></div>
+        </div>
+
+        <div class="options-box">
+          <div class="options" id="options"></div>
+        </div>
+
+        <div class="result" id="result"></div>
+        <button
+          id="nextBtn"
+          onclick="nextQuestion()"
+          style="display: none; margin-top: 20px"
+        >
+          Siguiente
+        </button>
+      </section>
+
+      <footer>
+        <p>© 2025 identikit. Sígueme en redes sociales.</p>
+
+        <div class="social-icons">
+          <a href="https://www.instagram.com/marcosbezzanski/" target="_blank">
+            <img
+              src="instagram-100.png"
+              alt="Instagram"
+              style="width: 50px; height: auto"
+            />
+          </a>
+
+          <a href="https://www.tiktok.com/@marcos__lo" target="_blank">
+            <img
+              src="tik-tok-100.png"
+              alt="TikTok"
+              style="width: 50px; height: auto"
+            />
+          </a>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      const questions = [
+        {
+          question: "¿Cuál es la capital de Francia?",
+          options: ["Madrid", "París", "Roma", "Berlín"],
+          answer: "París",
+        },
+        {
+          question: "¿Quién escribió 'Cien años de soledad'?",
+          options: [
+            "Mario Vargas Llosa",
+            "Gabriel García Márquez",
+            "Pablo Neruda",
+            "Isabel Allende",
+          ],
+          answer: "Gabriel García Márquez",
+        },
+        {
+          question: "¿Cuál es el planeta más grande del sistema solar?",
+          options: ["Tierra", "Saturno", "Júpiter", "Marte"],
+          answer: "Júpiter",
+        },
+        {
+          question: "¿En qué continente se encuentra Egipto?",
+          options: ["Asia", "Europa", "África", "América"],
+          answer: "África",
+        },
+        {
+          question: "¿Qué instrumento mide la presión atmosférica?",
+          options: ["Termómetro", "Barómetro", "Altímetro", "Higrómetro"],
+          answer: "Barómetro",
+        },
+      ];
+
+      let currentQuestion = 0;
+      let score = 0;
+
+      function loadQuestion() {
+        const q = questions[currentQuestion];
+        document.getElementById("question").textContent = q.question;
+        const optionsDiv = document.getElementById("options");
+        optionsDiv.innerHTML = "";
+        q.options.forEach((opt) => {
+          const btn = document.createElement("button");
+          btn.textContent = opt;
+          btn.onclick = () => checkAnswer(btn, q.answer);
+          optionsDiv.appendChild(btn);
+        });
+        document.getElementById("result").textContent = "";
+        document.getElementById("nextBtn").style.display = "none";
+      }
+
+      function checkAnswer(button, correctAnswer) {
+        const result = document.getElementById("result");
+
+        if (button.textContent === correctAnswer) {
+          result.textContent = "¡Correcto! 🎉";
+          result.style.color = "green";
+          score++;
+        } else {
+          result.textContent =
+            "Incorrecto. La respuesta correcta es: " + correctAnswer;
+          result.style.color = "red";
+        }
+
+        // Deshabilitar todos los botones
+        Array.from(document.getElementById("options").children).forEach(
+          (btn) => (btn.disabled = true)
+        );
+
+        // Mostrar botón de siguiente
+        document.getElementById("nextBtn").style.display = "inline-block";
+      }
+
+      function nextQuestion() {
+        currentQuestion++;
+        if (currentQuestion < questions.length) {
+          loadQuestion();
+        } else {
+          document.getElementById("question").textContent = "Juego terminado";
+          document.getElementById("options").innerHTML = "";
+          document.getElementById("result").textContent =
+            "Tu puntuación: " + score + " de " + questions.length;
+          document.getElementById("nextBtn").style.display = "none";
+        }
+      }
+
+      window.onload = loadQuestion;
+    </script>
+  </body>
+</html>

@@ -1,0 +1,147 @@
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+
+.wrapper {
+  flex: 1;
+}
+
+
+header {
+  background: linear-gradient(135deg, #0077b6, #00b4d8);
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+  border-bottom: 5px solid #03045e;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+header p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+header img {
+  width: 150px;
+  height: auto;
+  border-radius: 50%;
+  margin-top: 10px;
+  border: 4px solid white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: white;
+  color: #0077b6;
+}
+
+blockquote {
+  font-style: italic;
+  text-align: center;
+  margin: 30px auto;
+  padding: 20px;
+  max-width: 600px;
+  background-color: #e0f7fa;
+  border-left: 5px solid #0077b6;
+}
+
+section {
+  padding: 20px;
+  text-align: center;
+}
+
+.playlist {
+  margin-top: 10px;
+}
+
+audio {
+  display: block;
+  margin: 20px auto;
+  width: 90%;
+  max-width: 500px;
+  background-color: #ffffff;
+  border: 2px solid #00b4d8;
+  border-radius: 12px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.favoritos {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 15px;
+}
+
+.favoritos img {
+  width: 60px;
+  height: auto;
+  transition: transform 0.3s;
+}
+
+.favoritos img:hover {
+  transform: scale(1.1);
+}
+
+footer {
+  background-color: #0077b6;
+  color: white;
+  text-align: center;
+  padding: 40px;
+  margin-top: 40px;
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a img {
+  width: 40px;
+  height: auto;
+  margin: 0 10px;
+  transition: transform 0.3s;
+}
+
+.social-icons a img:hover {
+  transform: scale(1.1);
+}

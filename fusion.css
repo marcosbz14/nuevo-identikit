@@ -1,0 +1,382 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Contenedor principal */
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Centrado del contenido */
+section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Encabezado */
+
+header {
+  width: 100%;
+  background: linear-gradient(135deg, #0077b6, #00b4d8);
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+  border-bottom: 5px solid #03045e;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px;
+}
+
+header p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  font-style: italic;
+  font-size: 16px;
+}
+
+header img {
+  width: 150px;
+  height: auto;
+  border-radius: 50%;
+  margin-top: 10px;
+  border: 4px solid white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  margin-top: 15px;
+  width: 120px;
+  width: 140px;
+}
+
+/* Navegación */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  transition: background-color 0.3s, color 0.3s;
+  font-size: 14px;
+  padding: 6px 12px;
+}
+
+nav ul li a:hover {
+  background-color: white;
+  color: #0077b6;
+}
+
+/* Cita destacada */
+blockquote {
+  font-style: italic;
+  text-align: center;
+  margin: 30px auto;
+  padding: 20px;
+  max-width: 600px;
+  background-color: #e0f7fa;
+  border-left: 5px solid #0077b6;
+}
+
+/* Pregunta */
+.question {
+  font-size: 22px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.05);
+}
+
+/* Botones de opciones */
+.options button {
+  display: block;
+  margin: 10px auto;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #00b4d8, #0077b6);
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, background-color 0.3s;
+}
+
+.options button:hover {
+  transform: scale(1.05);
+  background-color: #0096c7;
+}
+
+/* Resultado */
+.result {
+  font-size: 18px;
+  margin-top: 20px;
+  font-weight: bold;
+  transition: opacity 0.3s ease;
+}
+
+/* Cajas para pregunta y opciones */
+.question-box {
+  background-color: #ffffff;
+  border: 2px solid #00b4d8;
+  border-radius: 12px;
+  padding: 20px 30px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  max-width: 600px;
+  width: 90%;
+}
+
+.options-box {
+  background-color: #ffffff;
+  border: 2px solid #0077b6;
+  border-radius: 12px;
+  padding: 20px 30px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  max-width: 600px;
+  width: 90%;
+}
+
+/* Favoritos */
+.favoritos {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 15px;
+}
+
+.favoritos img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 2px solid #00b4d8;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 60px;
+  height: auto;
+  transition: transform 0.3s;
+}
+
+.favoritos img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+}
+
+/* Reproductor de audio */
+audio {
+  display: block;
+  margin: 20px auto;
+  width: 90%;
+  max-width: 500px;
+  background-color: #ffffff;
+  border: 2px solid #00b4d8;
+  border-radius: 12px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Pie de página */
+footer {
+  background-color: #0077b6;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a img {
+  width: 40px;
+  height: auto;
+  margin: 0 10px;
+  transition: transform 0.3s;
+}
+
+.social-icons a img:hover {
+  transform: scale(1.1);
+}
+
+/* Base styles */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  text-align: center;
+  font-size: 32px;
+  color: #051720;
+  margin-top: 40px;
+  font-weight: bold;
+}
+
+main {
+  flex: 1;
+}
+
+header {
+  background: linear-gradient(135deg, #0077b6, #00b4d8);
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+  border-bottom: 5px solid #03045e;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  background-color: #0077b6;
+  padding: 20px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+blockquote {
+  font-style: italic;
+  text-align: center;
+  margin: 30px auto;
+  padding: 20px;
+  max-width: 600px;
+  background-color: #e0f7fa;
+  border-left: 5px solid #0077b6;
+}
+
+section {
+  padding: 20px;
+  text-align: center;
+}
+
+.favoritos {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 15px;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer {
+  background-color: #0077b6;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: auto;
+  margin-top: 40px;
+}
+
+.galeria {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.foto {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 10px;
+  width: 250px;
+  width: 90%;
+}
+
+.foto img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.descripcion {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #333;
+  font-size: 13px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 28px;
+}
+
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 30px 10px;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.wrapper {
+  flex: 1;
+}
+
+.playlist {
+  margin-top: 10px;
+}
+
+audio {
+  display: block;
+  margin: 20px auto;
+  width: 90%;
+  max-width: 500px;
+  background-color: #ffffff;
+  border: 2px solid #00b4d8;
+  border-radius: 12px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
